@@ -74,8 +74,10 @@ public class Movie {
 	@DateTimeFormat(pattern = "yyyy-MM-dd")
 	private Date updatedAt;
 
-	public Movie() {
+	public Movie(Object movie) {
 		// TODO Auto-generated constructor stub
+		this.title = movie.title;
+		this.description = movie.overview;
 	}
 
 	public User getUser() {
