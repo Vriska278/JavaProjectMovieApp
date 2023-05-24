@@ -33,22 +33,22 @@ public class Movie {
 	private String title;
 
 	@NotBlank
-	private List<String> genres;
+	private List<Object> genres;
 	
 	@NotBlank
-	private String description;
+	private String overview;
 
 	@NotBlank
-	private Double averageRating;
+	private Double vote_average;
+	
+//	@NotBlank
+//	private List<String> productionCompanies;
 	
 	@NotBlank
-	private List<String> productionCompanies;
+	private String poster_path;
 	
 	@NotBlank
-	private String posterUrl;
-	
-	@NotBlank
-	private String releaseDate;
+	private String release_date;
 	
 	@NotBlank
 	private Double runtime;
@@ -74,10 +74,8 @@ public class Movie {
 	@DateTimeFormat(pattern = "yyyy-MM-dd")
 	private Date updatedAt;
 
-	public Movie(Object movie) {
+	public Movie() {
 		// TODO Auto-generated constructor stub
-		this.title = movie.title;
-		this.description = movie.overview;
 	}
 
 	public User getUser() {
@@ -105,52 +103,47 @@ public class Movie {
 		this.title = title;
 	}
 
-	public List<String> getGenres() {
+
+
+	public List<Object> getGenres() {
 		return genres;
 	}
 
-	public void setGenres(List<String> genres) {
+	public void setGenres(List<Object> genres) {
 		this.genres = genres;
 	}
 
-	public String getDescription() {
-		return description;
+	public String getOverview() {
+		return overview;
 	}
 
-	public void setDescription(String description) {
-		this.description = description;
+	public void setOverview(String overview) {
+		this.overview = overview;
 	}
 
-	public Double getAverageRating() {
-		return averageRating;
+
+	public Double getVote_average() {
+		return vote_average;
 	}
 
-	public void setAverageRating(Double averageRating) {
-		this.averageRating = averageRating;
+	public void setVote_average(Double vote_average) {
+		this.vote_average = vote_average;
 	}
 
-	public List<String> getProductionCompanies() {
-		return productionCompanies;
+	public String getPoster_path() {
+		return poster_path;
 	}
 
-	public void setProductionCompanies(List<String> productionCompanies) {
-		this.productionCompanies = productionCompanies;
+	public void setPoster_path(String poster_path) {
+		this.poster_path = poster_path;
 	}
 
-	public String getPosterUrl() {
-		return posterUrl;
+	public String getRelease_date() {
+		return release_date;
 	}
 
-	public void setPosterUrl(String posterUrl) {
-		this.posterUrl = posterUrl;
-	}
-
-	public String getReleaseDate() {
-		return releaseDate;
-	}
-
-	public void setReleaseDate(String releaseDate) {
-		this.releaseDate = releaseDate;
+	public void setRelease_date(String release_date) {
+		this.release_date = release_date;
 	}
 
 	public Double getRuntime() {
