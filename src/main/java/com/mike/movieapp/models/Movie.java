@@ -29,30 +29,21 @@ public class Movie {
 	private Long id;
 
 	//Api attributes
-	@NotBlank
 	private String title;
 
-	@NotBlank
 	private List<Object> genres;
 	
-	@NotBlank
 	private String overview;
 
-	@NotBlank
 	private Double vote_average;
 	
-//	@NotBlank
 //	private List<String> productionCompanies;
 	
-	@NotBlank
 	private String poster_path;
 	
-	@NotBlank
 	private String release_date;
 	
-	@NotBlank
 	private Double runtime;
-	
 	
 	//user attributes
 	@NotNull
